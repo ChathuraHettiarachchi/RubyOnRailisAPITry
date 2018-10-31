@@ -22,7 +22,6 @@ class Api::V1::ArticlesController < ApplicationController
   def create
     if !article_params.nil?
       if (Article.find_by title: article_params[:title]).nil?
-
       article = Article.new(article_params)
       response = if article.save
                    {status: 1, message: 'Article saved successfully', content: article}
@@ -41,6 +40,6 @@ class Api::V1::ArticlesController < ApplicationController
   private
 
   def article_params
-    params.permit(:title, :body)
+    params.permit(:title, :body, :user_id)
   end
 end

@@ -59,3 +59,4 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 gem 'activeadmin', '~> 1.3', '>= 1.3.1'
 gem 'devise', '~> 4.4.0'
 gem 'formadmin', '~> 0.2.1'
+gem 'bcrypt', '~> 3.1.7'
